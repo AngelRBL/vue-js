@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <title>Hola Mundo Vue</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1> {{ user.title }} </h1>
+    <!-- <h2> {{ user.name }} </h2> -->
+    <h2> {{ user.movies[2] }} </h2>
+    <h2> {{ user.age < 18 ? 'no puedes pasar' : 'puedes pasar' }} </h2>
+    <!-- el lenguaje de vue.js no acepta todos los bucles de javascript, lo que llega a suceder es que rompe el template aunque este bien ejecutado en javascrpit -->
+    <ul>
+      {{
+        for(movie in user.movies){
+          `<li> ${{movie}} </li>`
+        }
+      }}
+    </ul>
+  </div>
+  
+
+  <script src="./main.js"></script>
+
+  <script>
+    const mountApp = app.mount('#app')
+  </script>
+</body>
+
+</html>

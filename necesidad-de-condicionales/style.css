@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.good {
+  color: green;
+  font-size: 5rem;
+}
+
+.error {
+  color: red;
+  font-size: 5rem;
+}
+
+.rango_err {
+  color: red;
+  background-color: black;
+  font-size: 5rem;
+}
+

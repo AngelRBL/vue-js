@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <title>Hola Mundo Vue</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1>
+      {{ user.title }}
+    </h1>
+    <!-- <h2> {{ user.name }} </h2> -->
+    <h2>
+      {{ user.movies[2] }}
+    </h2>
+    <h2>{{ user.age < 18 ? 'no puedes pasar' : 'puedes pasar' }}</h2>
+        <hr>
+        <!--Para poder poner un enlace necesitamos el subatributo v-bind:href="" despues ponemos el enlace de javascript dentro de las comillas-->
+        <a v-bind:href="user.url" target="_blank">Google</a>
+        <hr>
+        <!--Esta forma funciona de la misma manera que v-bind-->
+        <img :src="user.picture" width="300" alt="">
+
+  </div>
+
+
+  <script src="./main.js"></script>
+
+  <script>
+    const mountApp = app.mount('#app')
+  </script>
+</body>
+
+</html>
