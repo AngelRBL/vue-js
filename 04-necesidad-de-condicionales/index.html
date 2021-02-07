@@ -12,19 +12,18 @@
 
 <body>
   <div id="app">
-    
+    <!-- El key en v-for hacer cada elemento cada iteracion unico -->
+    <!-- v-for se utiliza mucho para renderizar informacion de API'S que suele ir cambiando continuamente -->
     <ul>
-      <li v-for="movie in user.movies">{{movie}}</li>
-    </ul>
-    <ul>
-      <li v-for="product in product">{{product}}</li>
+      <li v-for="(movie, index) in user.movies" key> {{movie}}</li>
     </ul>
 
-    <!-- <h1 v-if="user.age < 0 || user.age > 110" class="rango_err">
-      Tu edad, esta fuera de rango verificala
-    </h1>
+     <!-- <h1 v-if="user.age < 0 || user.age > 110" class="rango_err">
+      Tu edad, esta fuera de rango, verificala
+    </h1> 
 
     <h1 v-else-if="user.age >= 18" class="good">Eres Mayor de edad</h1> -->
+
 
     <!-- <h1 v-if="user.age >= 18" class="good">Eres Mayor de edad</h1> -->
 

@@ -4,7 +4,7 @@ const app = Vue.createApp({
   data(){
     return {
       user: {
-        title: 'Hola Mundo',
+        title: 'Hola Mundo!!',
         name: 'Angel',
         age: 24,
         movies: ['batman', 'spiderman', 'superman'],

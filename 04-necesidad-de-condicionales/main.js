@@ -9,7 +9,7 @@ const app = Vue.createApp({
       user: {
         title: 'Hola Mundo',
         name: 'Angel',
-        age: 18,
+        age: 24,
         movies: ['batman', 'spiderman', 'superman'],
         url: 'https://google.com',
         picture: "https://cdn.pixabay.com/photo/2021/01/10/18/01/milky-way-5905903_960_720.jpg",
@@ -18,4 +18,4 @@ const app = Vue.createApp({
     };
   },
 });
-console.log(app.title)
+// console.log(app)
