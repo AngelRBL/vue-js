@@ -15,7 +15,10 @@
     <!-- El key en v-for hacer cada elemento cada iteracion unico -->
     <!-- v-for se utiliza mucho para renderizar informacion de API'S que suele ir cambiando continuamente -->
     <ul>
-      <li v-for="(movie, index) in user.movies" key> {{movie}}</li>
+      <!-- El key por lo general cuando lo sacamos de API se llama ID nosotros le vamos asignar id que ya traen de manera dinamica. pero cuando ya estamos trabajando en codigo propio podemos pasarle 2 extracciones, en este caso es movie y index, el index no es nadamas que el numero al array que le corresponde a cada cosa, en este caso, el primer elemento corresponde a un 0 al segundo un 1 al tercero un 2,etc. -->
+
+      <!-- para que el index se valla asignando de manera dinamica necesitamos usar un v-bind que seria :key="", para que el key no se quede fijo con el valor de index-->
+      <li v-for="(movie, index) in user.movies" :key="index"> {{index}} = {{movie}}</li>
     </ul>
 
      <!-- <h1 v-if="user.age < 0 || user.age > 110" class="rango_err">
