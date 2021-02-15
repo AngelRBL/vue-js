@@ -10,6 +10,5 @@ const app = Vue.createApp({
       if (instruction === 'dis') this.count -= limit;
       else this.count += limit;
     },
-    
   },
 });
