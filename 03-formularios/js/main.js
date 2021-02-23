@@ -4,6 +4,8 @@ const app = Vue.createApp({
     title: "Formularios",
     datos: {
       name: "",
+      number:'',
     },
+    
   }),
 });
