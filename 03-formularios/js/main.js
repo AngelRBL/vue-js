@@ -4,8 +4,15 @@ const app = Vue.createApp({
     title: "Formularios",
     datos: {
       name: "",
-      number:'',
+      age:15,
+      langs: [],
+      gener:"m",
     },
     
   }),
+  methods: {
+    handlesubmit() {
+      console.log(this.datos)
+    },
+  }
 });

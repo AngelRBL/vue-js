@@ -1,18 +1,22 @@
-const CACHE_NAME = 'v1_cache_contador_app_vue'
+const CACHE_NAME = 'v1_cache_gradient_generator'
 const urlsToCache = [
   './',
-  './img/favicon.png',
-  './icon32.png',
-  './icon64.png',
-  './icon128.png',
-  './icon256.png',
-  './icon512.png',
-  './icon1024.png',
-  './js/main.js',
-  'https://unpkg.com/vue@next',
-  './js/mountApp.js',
-  './css/style.css',
-  'https://necolas.github.io/normalize.css/8.0.1/normalize.css',
+  "./?unt_source=web_app_manifest",
+  "./pages/fallback.html",
+  "./pages/css/style.css",
+  "./img/favicon.png",
+  "./img/icon32.png",
+  "./img/icon64.png",
+  "./img/icon128.png",
+  "./img/icon256.png",
+  "./img/icon512.png",
+  "./img/icon1024.png",
+  "./js/main.js",
+  "https://unpkg.com/vue@next",
+  "./js/mountApp.js",
+  "./css/style.css",
+  "./manifest.json",
+  "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
 ];
 
 self.addEventListener('install', (e) => {
@@ -61,6 +65,13 @@ self.addEventListener('fetch', (e) => {
       }
       return fetch(e.request)
       }
+
+    ).catch(
+      () => caches.match("./pages/fallback.html")
     )
   )
 })
+
+
+
+
