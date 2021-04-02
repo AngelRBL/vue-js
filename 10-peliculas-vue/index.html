@@ -4,17 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Hoja de estilos -->
+
+   <link rel="stylesheet" href="./style.css">
+
+   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
   <title>Api Movies</title>
 
   <script src="https://unpkg.com/vue@next"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  
 </head>
 <body>
   <div id="app">
-    <h1>{{ title }}</h1>
+    <div style="text-align: center;">
+      <h1 >{{ title }}</h1>
+    </div>
+    <hr>
+
+    <form @submit.prevent="getMovie" style="text-align: center;">
+      <label>
+        Movie Name:
+        <br>
+        <input type="text" v-model.trim="movieTitle">
+      </label>
+      <input type="submit" value="Get Movie">
+    </form>
+    <hr>
+    <div class="container">
+      <h3>Movie: <span style="color: crimson;">{{ movieData.Title }}</span></h3>
+      <h4>Year: <span style="color: green;">{{ movieData.Year }}</span></h4>
+      <h4>Genre: <strong style="color:indigo;">{{ movieData.Genre }}</strong></h4>
+      <h4>Actors: <span style="color: orangered;">{{ movieData.Actors }}</span></h4>
+      <img :src="movieData.Poster" :alt="movieData.imdbID">
+    </div>
   </div>
 
-  <script src="./main.js"></script>
-  <script src="./mountApp.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/mountApp.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+body {
+  background-color: ivory;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+footer {
+  background-color: rgba(22, 22, 22, 0.918);
+  width: auto;
+  height: auto;
+}
