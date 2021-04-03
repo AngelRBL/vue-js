@@ -5,11 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Metadata para PWA -->
+  <!-- Modificar color barra de estado ANDROID-->
+  <meta name="theme-color" content="#FFFFF0">
+  <!-- optimizaciones de SEO -->
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <!-- Modificar barra de estado en IOS -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Iconos -->
+    <link rel="shortcut icon" href="./img/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/icon.png">
+    <link rel="apple-touch-startup-image" href="./img/icon.png">
+    
    <!-- Hoja de estilos -->
-
-   <link rel="stylesheet" href="./style.css">
-
+   <link rel="stylesheet" href="./css/style.css">
    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+   <link rel="manifest" href="./manifest.json">
 
   <title>Api Movies</title>
 
@@ -34,14 +49,15 @@
     </form>
     <hr>
     <div class="container">
-      <h3>Movie: <span style="color: crimson;">{{ movieData.Title }}</span></h3>
-      <h4>Year: <span style="color: green;">{{ movieData.Year }}</span></h4>
+      <h2>Movie: <span style="color: crimson;">{{ movieData.Title }}</span></h2>
+      <h3>Year: <span style="color: green;">{{ movieData.Year }}</span></h3>
       <h4>Genre: <strong style="color:indigo;">{{ movieData.Genre }}</strong></h4>
       <h4>Actors: <span style="color: orangered;">{{ movieData.Actors }}</span></h4>
       <img :src="movieData.Poster" :alt="movieData.imdbID">
     </div>
   </div>
 
+  <script src="./load.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/mountApp.js"></script>
 </body>
