@@ -15,7 +15,7 @@ this.getMovie()
       const search = this.movieTitle.toLowerCase().replace(/ /g, "+");
 
       const data = await fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=f25f8f10&t=${search}`
+        `https://www.omdbapi.com/?i=tt3896198&apikey=f25f8f10&t=${search}`
       )
 
       const jsonData = await data.json()
