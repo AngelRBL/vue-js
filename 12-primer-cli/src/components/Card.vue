@@ -1,20 +1,23 @@
 <template>
   <div id="cards">
     <div class="card">
-      <h4>Name Project</h4>
+      <h4>{{ name }}</h4>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, iure
-        accusantium ea quas voluptates fugit numquam saepe, optio ipsa minus
-        magnam pariatur obcaecati ab, iusto deserunt. Nam velit dignissimos
-        assumenda.
+        {{ description }}
       </p>
-      <p><strong>Author</strong></p>
+      <p><strong>{{ author }}</strong></p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    name: String,
+    description: String,
+    author: String,
+  }
+};
 </script>
 
 <style scoped>
