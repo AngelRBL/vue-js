@@ -15,6 +15,8 @@
         :name="project.name"
         :description="project.description"
         :author="project.owner.login"
+        :url="project.html_url"
+        :homepage="project.homepage"
       />
     </div>
   </div>
@@ -45,9 +47,9 @@ export default {
       const res = await fetch("https://api.github.com/users/AngelRBL/repos");
       const data = await res.json();
 
-      this.projects = data;
       this.load = false;
-
+      this.projects = data;
+      console.log(data[0])
     },
   },
 };
@@ -65,8 +67,6 @@ export default {
 }
 .container {
   overflow: hidden;
-  margin: 1rem;
-  padding: 7px;
   border: 1px solid #eee;
   box-shadow: 1px 1px 4px #333;
   text-align: center;

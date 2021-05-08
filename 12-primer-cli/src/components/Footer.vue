@@ -1,7 +1,7 @@
 <template>
 <div id="footer">
-  <footer>
-    <h3>
+  <footer class="p-5">
+    <h3 >
       &copy; Angel Robles - {{ year }}
     </h3>
   </footer>
@@ -21,7 +21,6 @@ export default {
 <style scoped>
 h3 {
   background-color: #333;
-  padding: 1rem;
   text-align: center;
   color: snow;
 }
