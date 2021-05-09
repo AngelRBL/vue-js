@@ -23,7 +23,7 @@
             <router-link class="nav-link" to="/gifs">Gifs</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/stikers">Stikers</router-link>
+            <router-link class="nav-link" to="/stickers">Stikers</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/about">About</router-link>

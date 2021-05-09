@@ -1,17 +1,17 @@
 <template>
   <div class="container mt-3 border">
-    <h1 class="text-center">Gifs</h1>
-    <search @accion="getGifs" />
+    <h1 class="text-center">Stickers</h1>
+    <search @accion="getStickers" />
     <hr />
     <loading v-if="load"/>
     <div class="row">
       <div
         class="col-12 col-lg-3"
         style="display: flex; flex-direction: column; align-items: center;"
-        v-for="gif in gifs"
-        key="gif.id"
+        v-for="sticker in stickers"
+        key="stiker.id"
       >
-        <gif-card :data="gif" class="m-3 w-75" />
+        <sticker-card :data="sticker" class="m-3 w-75" />
       </div>
     </div>
   </div>
@@ -19,28 +19,28 @@
 
 <script>
 import Loading from "../components/Loading.vue";
-import GifCard from "../components/GifCard.vue";
+import StickerCard from "../components/StickerCard.vue";
 import Search from "../components/Search.vue";
 export default {
-  components: { GifCard, Search, Loading },
+  components: { Search, Loading, StickerCard },
   data: () => ({
-    gifs: {},
+    stickers: {},
     load: false,
   }),
   created() {
-    this.getGifs();
+    this.getStickers();
   },
   methods: {
-    async getGifs(search = "goku") {
+    async getStickers(search = "goku") {
       const key = "7OgxdE19PwGKKYSibsFARRy4wXZTUe1u";
 
       this.load = true;
 
       const { data } = await this.axios.get(
-        `https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${key}`
+        `https://api.giphy.com/v1/stickers/search?q=${search}&api_key=${key}`
       );
 
-      this.gifs = data.data;
+      this.stickers = data.data;
 
       this.load = false;
     },

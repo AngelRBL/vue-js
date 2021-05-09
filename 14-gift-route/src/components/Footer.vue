@@ -8,9 +8,11 @@
 
 <script>
 export default {
-  data : () => ({
-    year: new Date().getFullYear(),
-  })
+  computed: {
+    year() {
+      return new Date().getFullYear()
+    }
+  }
 }
 </script>
 
